@@ -1,2 +1,1 @@
-# chitramaddy.github.io
-Basic Profile
+My Profile

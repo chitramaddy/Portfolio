@@ -5,7 +5,12 @@
 
 body {
     margin: auto;
+    background: url("../images/HTML-5.jpg");
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+    border: 1px solid palegoldenrod;
 }
 
 .name {grid-area: header;}
@@ -14,6 +19,7 @@ body {
     display: grid;
     overflow: hidden;
     grid: 'header header header header header . . . ';
+    border: 1px solid palegoldenrod;
     background-color: rgb(28, 126, 0);
 }
 
@@ -35,7 +41,7 @@ body {
 
   .topnav>.menu:hover {
     background-color: white;
-    color: black;
+    color: white;
 }
 
 .main {
@@ -43,8 +49,13 @@ body {
     grid: 'click click story story story story story story' 
 }
 
-.pic {
-    margin: 20px 20px;
+.pic{
+    margin: 20px 10px;
+}
+
+.story{
+    font-family: cursive;
+    color:black;
 }
 
   .grid-2 {
@@ -86,6 +97,10 @@ body {
     display: none;
 }
 
+/* ul{
+
+} */
+
   #me {
       margin-top: 100px;
       margin-bottom: 100px;
@@ -93,6 +108,9 @@ body {
 
   #contact{
       margin-top: 100px;
+      text-align: center;
+      color: white;
+      font-style: italic;
   }
 
 

@@ -5,6 +5,7 @@
 
 body {
     margin: auto;
+    max-width: 960px;
     background-color: beige;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -46,15 +47,19 @@ img {
 
 .main {
     display: grid;
-    grid: 'click click story story story story story' 
+    grid: 'click click story story story story story';
+    position: relative;
 }
 
 .pic{
     margin: 20px 10px;
 }
 
-.story{
-    margin-right: 50px;
+.story {
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 18px;
     font-family: cursive;
     color:black;
 }
@@ -68,6 +73,7 @@ img {
     border-top: 1px solid palegoldenrod;
     border-left: 1px solid palegoldenrod;
     border-bottom: 1px solid palegoldenrod;
+    transition: transform .2s; 
 }
 
 .vertical-menu img{
@@ -77,7 +83,11 @@ img {
     text-decoration: none; /* Remove underline from links */
 }
 
-h3{
+/* .vertical-menu:hover {
+    transform: scale(1.5);
+} */
+
+h2{
     text-align: center;
     font-style: italic;
 }
@@ -115,7 +125,7 @@ ul {
       /* background: rgba(51, 12, 226, 0.726); */
       font-size: 20px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color: whitesmoke;
+      color: indigo;
       
   }
 
@@ -124,17 +134,9 @@ ul {
     display: none;
 }
 
-/* ul{
-
-} */
-
-  #me {
-      margin-top: 100px;
-      margin-bottom: 100px;
-  }
 
   #contact{
-      margin-top: 100px;
+      margin-top: 80px;
       text-align: center;
       color: black;
       font-size: large;

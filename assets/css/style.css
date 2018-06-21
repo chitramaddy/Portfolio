@@ -13,7 +13,9 @@ img {
     border: 1px solid palegoldenrod;
 }
 
-.name {grid-area: header;}
+.name {
+    grid-area: header;
+}
 
 .topnav {
     display: grid;
@@ -24,13 +26,13 @@ img {
 }
 
 .topnav>.name {
-    float: left; 
+    float: left;
     padding: 5px 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
     color: indigo;
-
 }
+
 .topnav>.menu {
     display: block;
     text-align: center;
@@ -39,7 +41,7 @@ img {
     font-size: 20px;
 }
 
-  .topnav>.menu:hover {
+.topnav>.menu:hover {
     background-color: white;
     color: white;
 }
@@ -50,7 +52,7 @@ img {
     position: relative;
 }
 
-.pic{
+.pic {
     margin: 20px 10px;
 }
 
@@ -60,10 +62,10 @@ img {
     margin-bottom: 30px;
     font-size: 18px;
     font-family: cursive;
-    color:black;
+    color: black;
 }
 
-.vertical-menu{
+.vertical-menu {
     width: 65px;
     position: absolute;
     right: 0px;
@@ -72,21 +74,24 @@ img {
     border-top: 1px solid palegoldenrod;
     border-left: 1px solid palegoldenrod;
     border-bottom: 1px solid palegoldenrod;
-    transition: transform .2s; 
+    transition: transform .2s;
 }
 
-.vertical-menu img{
+.vertical-menu img {
     background-color: rgba(255, 255, 255, 0.7);
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    text-decoration: none; /* Remove underline from links */
+    color: black;
+    /* Black text color */
+    display: block;
+    /* Make the links appear below each other */
+    text-decoration: none;
+    /* Remove underline from links */
 }
 
 /* .vertical-menu:hover {
     transform: scale(1.5);
 } */
 
-h2{
+h2 {
     text-align: center;
     font-style: italic;
 }
@@ -95,67 +100,140 @@ ul {
     list-style-type: none;
 }
 
-  .grid-2 {
+.grid-2 {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-gap: 10px;
     padding: 10px;
 }
 
-.photo{
-    position: relative;
-}
+/* .photo{
+    
+}*/
 
-.photo>img {
-    object-fit: cover;    
+.project {
+    position: relative;
     width: 100%;
     height: 250px;
+    overflow: hidden;
     text-align: center;
     font-size: 30px;
-  }  
+    border: 1px solid palegoldenrod;
+}
 
-  .photo>p{
-      position: absolute;
-      bottom: 10px;
-      left: 0px;
-      padding: 5px;
-      background:  rgba(255, 170, 39, 0.82);
-      font-size: 20px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color: indigo;
-      
-  }
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
 
-  /* Hide the link that should open and close the topnav on small screens */
+.one {
+    background-image: url("../images/ChefsDen.jpg");
+}
+
+.two {
+    background-image: url("../images/coffee.jpg");
+}
+
+.three {
+    background-image: url("../images/crystal.jpg");
+}
+
+.four {
+    background-image: url("../images/coding.jpg");
+}
+
+.five {
+    background-image: url("../images/ontrak.jpg");
+}
+
+.six {
+    background-image: url("../images/coding.jpg");
+}
+
+.project a {
+    display: none;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    cursor: pointer;
+}
+
+.project:hover .child,
+.project:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.project:hover .child:before,
+.project:focus .child:before {
+    display: block;
+}
+
+.project:hover a,
+.project:focus a {
+    display: block;
+}
+
+.child:before {
+    content: ""; 
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 73, 94, 0.75);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+
 .topnav .icon {
     display: none;
 }
 
+#contact {
+    margin-top: 80px;
+    text-align: center;
+    color: black;
+    font-size: large;
+    font-style: italic;
+}
 
-  #contact{
-      margin-top: 80px;
-      text-align: center;
-      color: black;
-      font-size: large;
-      font-style: italic;
-  }
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 
-
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-    .menu a:not(:first-child) {display: none;}
-    .menu a.icon {
-      float: right;
-      display: block;
+    .menu a:not(:first-child) {
+        display: none;
     }
-  }
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+}
 
-  @media screen and (max-width: 600px) {
-      .menu .responsive {position: relative}
-      .menu .responsive a {
-          float: none;
-          display: block;
-          text-align: center;
-      }
-  }
-  
+@media screen and (max-width: 600px) {
+    .menu .responsive {
+        position: relative
+    }
+    .menu .responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}

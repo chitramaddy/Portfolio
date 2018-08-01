@@ -94,7 +94,7 @@ ul {
 .grid-2 {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-gap: 100px;
+    grid-gap: 20px;
     padding: 10px;
 }
 

@@ -5,7 +5,8 @@
 
 body {
   margin: auto;
-  background-color: beige;
+  background: url("../images/papers.co-vy12-simple-white-pattern-background-6-wallpaper.jpg")
+    repeat;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -22,12 +23,14 @@ body {
   display: grid;
   overflow: hidden;
   grid: "header header header header header . . . ";
-  border-bottom: 3px solid goldenrod;
-  background-color: rgba(240, 170, 39, 0.8);
+  border-bottom: 3px solid pink;
+  background-color: white;
+  backface-visibility: hidden;
 }
 
 .topnav > .name {
   float: left;
+  margin-top: 5px;
   padding: 5px 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -39,12 +42,14 @@ body {
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: 20px 0px;
+  margin-top: 10px;
+  padding: 10px 0px 0px 0px;
   font-size: 20px;
 }
 
 .topnav > .menu:hover {
-  background-color: white;
+  border: solid 1px pink;
+  border-radius: 15px;
   color: white;
 }
 
